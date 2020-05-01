@@ -1,4 +1,24 @@
-# vue-firebase-crud-app
-An event management app made with vue &amp; firebase, has CRUD operations
+# event-management-vue-firebase
 
-This project assumes you have the knowledge of setting up firestore and change the config files accordingly
+## Project setup
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
