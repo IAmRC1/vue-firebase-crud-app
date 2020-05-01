@@ -1,5 +1,7 @@
 # event-management-vue-firebase
 
+Project assumes you to have knowledge of setting up firestore and paste the config in Firebase.js file, also, create a database with name 'events' along with the keys in AddEvent.vue.
+
 ## Project setup
 ```
 npm install
