@@ -1,9 +1,9 @@
 <template>
-  <div class="d-flex align-items-start">
-    <div class="col">
-      <img :src="event.eventimage" />
+  <div class="d-flex align-items-center">
+    <div class="col-7">
+      <img :src="event.eventimage" width="100%" height="500" />
     </div>
-    <div class="col">
+    <div class="col-5">
       <h3>{{event.title}}</h3>
       <p>{{event.description}}</p>
       <p>{{event.author_name}}</p>
