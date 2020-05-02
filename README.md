@@ -6,12 +6,26 @@ Change the rules in firestore..
 service cloud.firestore {
   match /databases/{database}/documents {
     match /{document=**} {
-      allow read, write: if **true**;
+      allow read, write: if true;
     }
   }
 }
 ```
-Then create a folder 'config' under src directory and inside config, create a file 'customconfig.js' and paste you config in that file.
+Then create a folder 'config' under src directory and inside config, create a file 'customconfig.js' and paste you config in that file like this
+
+```
+let customconfig = {
+  apiKey: "...",
+  authDomain: "...",
+  databaseURL: "...",
+  projectId: "...",
+  storageBucket: "...",
+  messagingSenderId: "...",
+  appId: "..."
+};
+
+export { customconfig }
+```
 
 
 ## Project setup
