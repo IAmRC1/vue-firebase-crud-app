@@ -1,3 +1,7 @@
+- [x] Added no data image
+- [] Modify the database so as to recieve real time updates
+- [] Update the event from event-detail page
+
 # event-management-vue-firebase
 
 Project assumes you to have knowledge of setting up firestore and create a database with name 'events' along with the keys in AddEvent.vue.
