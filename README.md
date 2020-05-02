@@ -1,6 +1,9 @@
 - [x] Added no data image
-- [ ] Modify the database so as to recieve real time updates
+- [x] Added single event delete
+- [x] Added Delete All button
 - [ ] Update the event from event-detail page
+- [ ] Modify the database so as to recieve real time updates
+
 
 # event-management-vue-firebase
 
