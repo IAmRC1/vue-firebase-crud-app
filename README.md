@@ -1,6 +1,13 @@
+- [x] Added no data image
+- [x] Added single event delete
+- [x] Added Delete All button
+- [ ] Update the event from event-detail page
+- [ ] Modify the database so as to recieve real time updates
+
+
 # event-management-vue-firebase
 
-Project assumes you to have knowledge of setting up firestore and paste the config in Firebase.js file, also, create a database with name 'events' along with the keys in AddEvent.vue.
+Project assumes you to have knowledge of setting up firestore and create a database with name 'events' along with the keys in AddEvent.vue.
 Change the rules in firestore..
 ```
 service cloud.firestore {
@@ -11,6 +18,22 @@ service cloud.firestore {
   }
 }
 ```
+Then create a folder 'config' under src directory and inside config, create a file 'customconfig.js' and paste you config in that file like this
+
+```
+let customconfig = {
+  apiKey: "...",
+  authDomain: "...",
+  databaseURL: "...",
+  projectId: "...",
+  storageBucket: "...",
+  messagingSenderId: "...",
+  appId: "..."
+};
+
+export { customconfig }
+```
+
 
 ## Project setup
 ```
@@ -21,16 +44,3 @@ npm install
 ```
 npm run serve
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
