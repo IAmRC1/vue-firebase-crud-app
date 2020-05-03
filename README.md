@@ -1,8 +1,9 @@
 - [x] Added no data image
 - [x] Added single event delete
 - [x] Added Delete All button
+- [ ] Fix delete all functionality
 - [ ] Update the event from event-detail page
-- [ ] Modify the database so as to recieve real time updates
+- [x] Modify the database so as to recieve real time updates
 - [ ] Add validation using vuelidate/vee-validate
 
 
