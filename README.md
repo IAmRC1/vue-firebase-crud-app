@@ -3,7 +3,7 @@
 - [x] Added Delete All button
 - [x] Modify the database so as to recieve real time updates
 - [x] Apply sorting on name & date
-- [ ] Fix delete all functionality
+- [x] Fix delete all functionality
 - [ ] Update the event from event-detail page
 - [ ] Add validation using vuelidate/vee-validate
 - [ ] Make it fully responsive
