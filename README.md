@@ -3,6 +3,7 @@
 - [x] Added Delete All button
 - [ ] Update the event from event-detail page
 - [ ] Modify the database so as to recieve real time updates
+- [ ] Add validation using vuelidate/vee-validate
 
 
 # event-management-vue-firebase
