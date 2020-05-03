@@ -94,11 +94,11 @@ export default {
   },
   methods: {
     onSubmit () {
-      console.log('this.eventData', this.eventData)
+      //console.log('this.eventData', this.eventData)
       this.eventsRef
       .add(this.eventData)
-      .then((docRef) => {
-        console.log("Document written with ID: ", docRef.id);
+      .then(() => {
+        //console.log("Document written with ID: ", docRef.id);
         router.push({
           name: 'ViewEvent'
         })

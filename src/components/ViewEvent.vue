@@ -4,7 +4,7 @@
         <h2>
           All Events
         </h2>
-        <button v-if="!loading && events && events.length > 0" class="btn btn-danger" @click="delallevt()">
+        <button v-if="!loading && events && events.length > 1" class="btn btn-danger" @click="delallevt()">
           <ion-icon name="trash-outline" /> Delete All
         </button>
       </div>
@@ -22,7 +22,7 @@
       </div>
       <div v-else>
         <ul class="d-flex flex-wrap list-unstyled mt-4">
-            <li v-for="event in events" :key="event.key" class="col-3 mb-5 position-relative">
+            <li v-for="event in events" :key="event.key" class="col-lg-3 col-sm-6 col-xs-12 mb-5 position-relative">
               <button class="btn delete" @click="delevt(event.key)">
                 <ion-icon name="close-outline" />
               </button>
@@ -62,7 +62,8 @@ export default {
   },
   created () {
     this.loading = true
-    this.eventsRef.get().then((querySnapshot) => {
+    this.eventsRef
+    .onSnapshot((querySnapshot) => {
       if(querySnapshot.empty){
         this.loading = false
         return this.nodata = true
@@ -85,27 +86,24 @@ export default {
         });
       });
     })
-    .catch(function(error) {
-      console.log("Error getting events: ", error);
-    });
   },
   methods: {
     delevt: function(id){
-      this.eventsRef.doc(id).delete().then(() => console.log('Event deleted'))
+      this.events = [];
+      this.eventsRef.doc(id).delete()
+      .then(() => console.log('Event deleted'))
       .catch(error => console.log(error))
     },
     delallevt: function(){
       if(confirm("Click OK to delete ALL the events")){
         this.eventsRef
-        .get().then(res => {
-          res.forEach(element => {
-            element.ref.delete();
-          });
-        })
-        .catch(error => console.log('error', error))
+        .doc().delete().then(function() {
+            console.log("Document successfully deleted!");
+        }).catch(function(error) {
+            console.error("Error removing document: ", error);
+        });
       }
-      
-    } 
+    }
   }
 }
 </script>
